@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Dancing Script', cursive, 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom right,		#c99d9d, #eeeced);
+    min-height: 100vh;
+    color: #333;
+    font-size: 16px;
+    /* padding: 20px; */
+}
+
+header .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;              /* Enable flexbox */
+    justify-content: space-between;  /* Brand left, nav right */
+    align-items: center; 
+}
+
+.brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    color: #A0522D;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #a0522d;
+    font-weight: bold;
+}
+
+section {
+    margin: 30px 0;
+}
+
+/* .gallery .item {
+  width: 200px;
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+} */
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+}
