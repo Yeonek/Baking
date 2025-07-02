@@ -1,0 +1,238 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sweet Bloom Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+        font-family: 'Roboto', sans-serif;
+        background: #90becf;
+        color: #333;
+        line-height: 1.6;
+        }
+
+        header {
+        background: url('https://images.unsplash.com/photo-1607082349766-d4f71d7f9e7f') center/cover no-repeat;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        }
+
+        header::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        }
+
+        header h1, header p {
+        z-index: 1;
+        }
+
+        header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+        animation: fadeDown 1s ease forwards;
+        opacity: 0;
+        }
+
+        header p {
+        font-size: 1.5rem;
+        animation: fadeIn 2s ease forwards;
+        opacity: 0;
+        }
+
+        section {
+        padding: 60px 20px;
+        max-width: 1100px;
+        margin: auto;
+        }
+
+        h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        }
+
+        .about p {
+        max-width: 700px;
+        margin: auto;
+        font-size: 1.2rem;
+        text-align: center;
+        }
+
+        .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        }
+
+        .gallery-item {
+        overflow: hidden;
+        border-radius: 16px;
+        position: relative;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+        }
+
+        .gallery-item.show {
+        opacity: 1;
+        transform: translateY(0);
+        }
+
+        .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+        }
+
+        .gallery-item:hover img {
+        transform: scale(1.1);
+        }
+
+        .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        }
+
+        .menu-item {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        width: 250px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+        transform: translateY(-10px);
+        }
+
+        .menu-item h3 {
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+        }
+
+        .testimonial {
+        font-style: italic;
+        max-width: 700px;
+        margin: auto;
+        text-align: center;
+        padding: 20px;
+        background: #fff0f0;
+        border-radius: 12px;
+        }
+
+        .contact {
+        text-align: center;
+        font-size: 1.1rem;
+        }
+
+        .contact a {
+        color: #ff7a7a;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #777;
+        }
+
+        @keyframes fadeDown {
+        0% { transform: translateY(-30px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+    </style>
+    </head>
+    <body>
+
+    <header>
+        <h1>Sweet Bloom Bakery</h1>
+        <p>Handcrafted cakes and pastries made with love</p>
+    </header>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Welcome to Sweet Bloom! We bake with passion using the finest ingredients. Whether you're looking for an elegant cake or everyday treats, we’ve got you covered.</p>
+    </section>
+
+    <section class="gallery">
+        <h2>Our Creations</h2>
+        <div class="gallery">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1607247837235-f2a444efc44b" alt="Cake 1" /></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1589308078050-aa08d35e90c4" alt="Cake 2" /></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1612198523663-3e99e46be4fc" alt="Cake 3" /></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="Pastry" /></div>
+        </div>
+    </section>
+
+    <section class="menu">
+        <h2>Menu Highlights</h2>
+        <div class="menu">
+        <div class="menu-item">
+            <h3>Red Velvet Cake</h3>
+            <p>Moist layers with cream cheese frosting.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Butter Croissant</h3>
+            <p>Flaky and fresh, perfect for mornings.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Macarons</h3>
+            <p>Colorful bites with delicate flavor.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <h2>What People Say</h2>
+        <p>“The best cake I’ve had in years. It looked stunning and tasted even better.” – Emily R.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>📍 123 Sweet St, Dessert City<br>
+        📞 Call us at <a href="tel:+1234567890">(123) 456-7890</a><br>
+        📧 Email: <a href="mailto:hello@sweetbloom.com">hello@sweetbloom.com</a></p>
+    </section>
+
+    <footer>
+        &copy; 2025 Sweet Bloom Bakery. All rights reserved.
+    </footer>
+
+    <script>
+        // Animate gallery items on scroll
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            }
+        });
+        });
+        document.querySelectorAll('.gallery-item').forEach(el => observer.observe(el));
+    </script>
+    </body>
+    </html>
